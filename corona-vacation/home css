@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Calibri;
+}
+/* Css Grid */
+.main{
+    width: available;
+    height: available;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'logo topnav topnav topnav'
+    'slideshow slideshow slideshow slideshow '
+    'extra-links extra-links extra-links extra-links'
+    'products products gallery gallery'
+    'footer footer footer footer';
+}
+.logo{
+    margin-top: -10px;
+    margin-right: 2px;
+}
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: white;
+    grid-area: topnav;
+    position: relative;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+}
+
+.brand-logo{
+    float: left;
+    margin: 10px;
+    grid-area: logo;
+}
+
+
+/*
+Change color on hover */
+.topnav a:hover {
+    background-color: #ffde59;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    background-color: #ddd;
+    padding: 0px;
+    grid-area: slideshow;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    grid-area: footer;
+}
+
+.imgcontainer{
+    padding-top: 0px;
+    grid-area: slideshow;
+}
+.slider{
+    overflow: hidden;
+    grid-area: slideshow;
+}
+
+.img{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+.src{
+    float: left;
+    width: 20%;
+}
+
+
+
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -300%;
+    }
+}
+
+/*middle content*/
+.extra-links{
+    grid-area: extra-links;
+    font-size: 40px;
+    text-align: center;
+    font-family: Helvetica;
+    background-color: #ffde59;
+}
+.gallery {
+    grid-area: gallery;
+    background-color: whitesmoke;
+}
+.cropped{
+    width: 760px;
+    height: 440px;
+    object-fit: cover;
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.products{
+    grid-area: products;
+    background-color: whitesmoke;
+}
+
+video{
+    width: 760px;
+    height: 440px;
+    object-fit: cover;
+}
+
+
+
+
